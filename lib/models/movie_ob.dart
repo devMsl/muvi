@@ -1,3 +1,12 @@
+import 'dart:convert';
+
+List<MovieOb> movieFromJson(String str) =>
+    List<MovieOb>.from(json.decode(str).map((x) => MovieOb.fromJson(x)));
+
+MovieOb movieDetailFromJson(String str) =>
+    MovieOb.fromJson(json.decode(str));
+
+
 class MovieOb{
   int? iD;
   String? title;

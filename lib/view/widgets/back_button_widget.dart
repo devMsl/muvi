@@ -1,5 +1,6 @@
 import '../../utils/index.dart';
 
+
 class BackButtonWidget extends StatelessWidget {
   const BackButtonWidget({Key? key}) : super(key: key);
 
@@ -7,7 +8,7 @@ class BackButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: (){
-        context.backed();
+        Get.back();
       },
       child: Container(
         margin: const EdgeInsets.only(left:6),
