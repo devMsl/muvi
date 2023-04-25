@@ -1,6 +1,6 @@
 # Muvi
 
-A simple movie app using flutter.
+A simple movie app using flutter with rxdart.
 
 ### Features
 
