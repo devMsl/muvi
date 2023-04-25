@@ -24,6 +24,10 @@ class _MovieListPageState extends State<MovieListPage> {
     _bloc = MovieBloc(getList, ObType.list);
     _bloc.getMovieData();
     _bloc.movieStream().listen((event) {
+      if (event.responseState == ResponseState.loading) {
+        isError = false;
+        setState(() {});
+      }
       if (event.responseState == ResponseState.data) {
         movieListOb = event.data;
         isError = false;
